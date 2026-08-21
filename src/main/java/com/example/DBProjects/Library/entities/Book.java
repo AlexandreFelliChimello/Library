@@ -1,36 +1,53 @@
 package com.example.DBProjects.Library.entities;
 
+import com.example.DBProjects.Library.entities.enums.Material;
+import com.example.DBProjects.Library.entities.enums.Status;
+import com.example.DBProjects.Library.entities.enums.Stock;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.annotation.Generated;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_book")
 public class Book implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate publishDate;
     private Integer pages;
     private Double price;
 
+    @ManyToMany
+    @JoinTable(name = "tb_book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private Set<Author> authors;
+
+    @ManyToOne
+    @JoinColumn(name = "publisher_id")
+    private Publisher pulbisher;
+
+    private Integer status;
+    private Integer stock;
+    private Integer material;
     public Book(){}
 
-    public Book(Long id, String title, LocalDate publishDate, Integer pages, Double price) {
+    public Book(Long id, String title, LocalDate publishDate, Integer pages, Double price, Status status, Stock stock, Material material) {
         this.id = id;
         this.title = title;
         this.publishDate = publishDate;
         this.pages = pages;
         this.price = price;
+        setStatus(status);
+        setStock(stock);
+        setMaterial(material);
     }
 
     public Long getId() {
@@ -73,8 +90,38 @@ public class Book implements Serializable {
         this.price = price;
     }
 
-    public Book(Long id) {
-        this.id = id;
+
+    public Status getStatus() {return Status.valueOf(status);}
+
+    public void setStatus(Status status) {
+        if (status != null){
+            this.status = status.getCode();
+        };
+    }
+
+    public Stock getStock() {
+        return Stock.valueOf(stock);
+    }
+
+    public void setStock(Stock stock) {
+        if (stock != null){
+            this.stock = stock.getCode();
+        };
+    }
+
+    public Material getMaterial() {
+        return Material.valueOf(material);
+    }
+
+    public void setMaterial(Material material) {
+        if (material != null){
+            this.material = material.getCode();
+        }
+    }
+
+    @JsonIgnore
+    public Set<Author> getAuthors() {
+        return authors;
     }
 
     @Override

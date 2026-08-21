@@ -1,0 +1,28 @@
+Amyr Klink;70;Brasil;Vivo
+Luca Cognolato;63;Itália;Vivo
+Silvia del Francia;56;Itália;Viva
+Maurício Santana Dias;58;Brasil;Vivo
+Alexandra Monir;41;Estados Unidos;Viva
+Burton G. Malkiel;93;Estados Unidos;Vivo
+Vishen Lakhiani;50;Malásia;Vivo
+Suhas G. Kshirsagar;61;Índia;Vivo
+Craig Wright;55;Austrália;Vivo
+Arthur Bender;65;Brasil;Vivo
+Napoleon Hill;87;Estados Unidos;Morto
+Nicolau Maquiavel;58;Itália;Morto
+Yuval Noah Harari;50;Israel;Vivo
+Charles Duhigg;52;Estados Unidos;Vivo
+Thomas L. Friedman;73;Estados Unidos;Vivo
+Dale Carnegie;66;Estados Unidos;Morto
+Brené Brown;60;Estados Unidos;Viva
+Alfred Mill;45;Estados Unidos;Vivo
+Hal Elrod;47;Estados Unidos;Vivo
+Oliver Bowden;78;Reino Unido;Vivo
+Anne Frank;15;Alemanha;Morta
+Robert Fisher;86;Estados Unidos;Morto
+Madeleine L'Engle;88;Estados Unidos;Morta
+Ichiro Kishimi;70;Japão;Vivo
+Martha Medeiros;64;Brasil;Viva
+Eduardo Almeida de Araújo;55;Brasil;Vivo
+Lon Fuller;76;Estados Unidos;Morto
+Fiódor Dostoiévski;59;Rússia;Morto
