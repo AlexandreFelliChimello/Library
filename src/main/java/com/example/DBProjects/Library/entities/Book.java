@@ -26,17 +26,19 @@ public class Book implements Serializable {
     private Integer pages;
     private Double price;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "tb_book_author", joinColumns = @JoinColumn(name = "book_id"), inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors;
 
     @ManyToOne
     @JoinColumn(name = "publisher_id")
-    private Publisher pulbisher;
+    private Publisher publisher;
 
     private Integer status;
     private Integer stock;
     private Integer material;
+
     public Book(){}
 
     public Book(Long id, String title, LocalDate publishDate, Integer pages, Double price, Status status, Stock stock, Material material) {
@@ -117,6 +119,14 @@ public class Book implements Serializable {
         if (material != null){
             this.material = material.getCode();
         }
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 
     @JsonIgnore

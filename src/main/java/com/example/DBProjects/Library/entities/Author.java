@@ -1,6 +1,7 @@
 package com.example.DBProjects.Library.entities;
 
 import com.example.DBProjects.Library.entities.enums.Dora;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -21,6 +22,7 @@ public class Author implements Serializable {
 
     private Integer dora;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "authors")
     private List<Book> books;
 
@@ -36,6 +38,7 @@ public class Author implements Serializable {
         this.name = name;
         this.age = age;
         this.country = country;
+        setDorA(dora);
     }
 
     public Long getId() {
@@ -71,12 +74,18 @@ public class Author implements Serializable {
     }
 
     public Dora getDora(){
+
+        if (dora == null){
+            return null;
+        }
         return Dora.valueOf(dora);
     }
 
     public void setDorA(Dora dora) {
         if (dora != null){
             this.dora = dora.getCode();
+        } else{
+            this.dora = null;
         }
     }
 

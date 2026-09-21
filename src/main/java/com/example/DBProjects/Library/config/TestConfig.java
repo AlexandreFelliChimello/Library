@@ -11,12 +11,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.annotation.Order;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Configuration
 @Profile("test")
+@Order(1) //Roda primeiro TestConfig e depois o DataImport
 public class TestConfig implements CommandLineRunner {
 
     @Autowired
@@ -29,7 +31,6 @@ public class TestConfig implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         booksRepository.saveAll(List.of(
-
                 new Book(null, "Cem Dias Entre Céu & Mar", LocalDate.of(2026, 7, 21), 216, 85.40, Status.NOT_READ, Stock.HAVE, Material.PHYSICAL),
         new Book(null, "O Herói Invisível", LocalDate.of(1970, 1, 1), 168, 56.00, Status.NOT_READ, Stock.HAVE, Material.PHYSICAL),
         new Book(null, "Os Seis Finalistas", LocalDate.of(2018, 6, 12), 328, 43.87, Status.READ, Stock.HAVE, Material.PHYSICAL),

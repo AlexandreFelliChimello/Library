@@ -1,7 +1,6 @@
 package com.example.DBProjects.Library.resources;
 
 import com.example.DBProjects.Library.entities.Author;
-import com.example.DBProjects.Library.entities.Author;
 import com.example.DBProjects.Library.services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
