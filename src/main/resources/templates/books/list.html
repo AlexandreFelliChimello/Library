@@ -6,11 +6,17 @@
 </head>
 <body>
 <h1>Os meus livros</h1>
-
+<a th:href="@{/books/register}">Registrar livro</a>
 <ul>
-    <li th:each="book : ${books}"
-        th:text="${book.title}">
-        Título do livro
+    <li th:each="book : ${books}">
+        <a th:href="@{/books/{id}(id=${book.id})}"
+           th:text="${book.title}">
+            Título do livro
+        </a>
+
+        <a th:href="@{/books/{id}/edit(id=${book.id})}">
+            Editar
+        </a>
     </li>
 </ul>
 </body>
