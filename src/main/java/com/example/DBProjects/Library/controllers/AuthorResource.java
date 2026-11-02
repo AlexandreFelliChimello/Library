@@ -1,6 +1,6 @@
-package com.example.DBProjects.Library.resources;
+package com.example.DBProjects.Library.controllers;
 
-import com.example.DBProjects.Library.entities.Author;
+import com.example.DBProjects.Library.domain.Author;
 import com.example.DBProjects.Library.services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,4 +29,5 @@ public class AuthorResource implements Serializable {
         Author author = service.findById(id);
         return ResponseEntity.ok().body(author);
     }
+
 }

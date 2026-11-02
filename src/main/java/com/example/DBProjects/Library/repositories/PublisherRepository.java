@@ -1,7 +1,6 @@
 package com.example.DBProjects.Library.repositories;
 
-import com.example.DBProjects.Library.entities.Book;
-import com.example.DBProjects.Library.entities.Publisher;
+import com.example.DBProjects.Library.domain.Publisher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

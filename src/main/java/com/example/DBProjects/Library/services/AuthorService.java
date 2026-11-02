@@ -1,6 +1,6 @@
 package com.example.DBProjects.Library.services;
 
-import com.example.DBProjects.Library.entities.Author;
+import com.example.DBProjects.Library.domain.Author;
 import com.example.DBProjects.Library.repositories.AuthorRepository;
 import com.example.DBProjects.Library.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

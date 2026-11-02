@@ -1,6 +1,6 @@
 package com.example.DBProjects.Library.services;
 
-import com.example.DBProjects.Library.entities.Book;
+import com.example.DBProjects.Library.domain.Book;
 import com.example.DBProjects.Library.repositories.BookRepository;
 import com.example.DBProjects.Library.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,4 +23,17 @@ public class BookService implements Serializable {
     }
 
     public List<Book> findAll(){ return repository.findAll();}
+
+    public Book insert(Book book){
+         return repository.save(book);
+    }
+
+    public Book update(Long id, Book updatedBook) {
+        Book existingBook = findById(id);
+
+        existingBook.setTitle(updatedBook.getTitle());
+        existingBook.setPages(updatedBook.getPages());
+
+        return repository.save(existingBook);
+    }
 }

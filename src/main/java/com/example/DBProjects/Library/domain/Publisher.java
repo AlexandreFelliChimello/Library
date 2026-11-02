@@ -1,4 +1,4 @@
-package com.example.DBProjects.Library.entities;
+package com.example.DBProjects.Library.domain;
 
 import jakarta.persistence.*;
 

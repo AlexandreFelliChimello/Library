@@ -1,4 +1,4 @@
-package com.example.DBProjects.Library.entities.enums;
+package com.example.DBProjects.Library.domain.enums;
 
 public enum Stock {
 

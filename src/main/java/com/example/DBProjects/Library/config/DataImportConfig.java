@@ -1,9 +1,9 @@
 package com.example.DBProjects.Library.config;
 
-import com.example.DBProjects.Library.entities.Author;
-import com.example.DBProjects.Library.entities.Book;
-import com.example.DBProjects.Library.entities.Publisher;
-import com.example.DBProjects.Library.entities.enums.Dora;
+import com.example.DBProjects.Library.domain.Author;
+import com.example.DBProjects.Library.domain.Book;
+import com.example.DBProjects.Library.domain.Publisher;
+import com.example.DBProjects.Library.domain.enums.Dora;
 import com.example.DBProjects.Library.repositories.AuthorRepository;
 import com.example.DBProjects.Library.repositories.BookRepository;
 import com.example.DBProjects.Library.repositories.PublisherRepository;
