@@ -1,6 +1,6 @@
-package com.example.DBProjects.Library.entities;
+package com.example.DBProjects.Library.domain;
 
-import com.example.DBProjects.Library.entities.enums.Dora;
+import com.example.DBProjects.Library.domain.enums.Dora;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 

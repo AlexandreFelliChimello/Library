@@ -1,8 +1,6 @@
-package com.example.DBProjects.Library.resources;
+package com.example.DBProjects.Library.controllers;
 
-import com.example.DBProjects.Library.entities.Author;
-import com.example.DBProjects.Library.entities.Publisher;
-import com.example.DBProjects.Library.services.AuthorService;
+import com.example.DBProjects.Library.domain.Publisher;
 import com.example.DBProjects.Library.services.PublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

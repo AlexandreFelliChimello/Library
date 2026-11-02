@@ -1,10 +1,9 @@
 package com.example.DBProjects.Library.config;
 
-import com.example.DBProjects.Library.entities.Author;
-import com.example.DBProjects.Library.entities.Book;
-import com.example.DBProjects.Library.entities.enums.Material;
-import com.example.DBProjects.Library.entities.enums.Status;
-import com.example.DBProjects.Library.entities.enums.Stock;
+import com.example.DBProjects.Library.domain.Book;
+import com.example.DBProjects.Library.domain.enums.Material;
+import com.example.DBProjects.Library.domain.enums.Status;
+import com.example.DBProjects.Library.domain.enums.Stock;
 import com.example.DBProjects.Library.repositories.AuthorRepository;
 import com.example.DBProjects.Library.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

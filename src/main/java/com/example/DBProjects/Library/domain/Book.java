@@ -1,8 +1,8 @@
-package com.example.DBProjects.Library.entities;
+package com.example.DBProjects.Library.domain;
 
-import com.example.DBProjects.Library.entities.enums.Material;
-import com.example.DBProjects.Library.entities.enums.Status;
-import com.example.DBProjects.Library.entities.enums.Stock;
+import com.example.DBProjects.Library.domain.enums.Material;
+import com.example.DBProjects.Library.domain.enums.Status;
+import com.example.DBProjects.Library.domain.enums.Stock;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

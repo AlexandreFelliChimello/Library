@@ -1,6 +1,4 @@
-package com.example.DBProjects.Library.entities.enums;
-
-import java.util.Locale;
+package com.example.DBProjects.Library.domain.enums;
 
 public enum Dora {
 
